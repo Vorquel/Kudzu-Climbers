@@ -1,0 +1,32 @@
+plugins {
+    id "net.minecraftforge.gradle.forge" version "2.0.2"
+}
+
+def mcVersion = "1.8.0"
+def modVersion = "0.1.0"
+
+version = mcVersion + '-' + modVersion
+group = "vorquel.mod.kudzuclimbers"
+archivesBaseName = "kudzu-climbers"
+
+minecraft {
+    version = "1.8-11.14.4.1563"
+    runDir = "run"
+    mappings = "stable_17"
+    makeObfSourceJar = false
+}
+
+processResources
+{
+    inputs.property "modVersion", modVersion
+    inputs.property "mcVersion", mcVersion
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'modVersion':modVersion, 'mcVersion':mcVersion
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

@@ -1,0 +1,22 @@
+
+[
+{
+  "modid": "KudzuClimbers",
+  "name": "Kudzu Climbers",
+  "description": "Organic ladders on the go!",
+  "version": "${modVersion}",
+  "mcversion": "${mcVersion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Vorquel"
+  ],
+  "credits": "Thanks to all my fans and sponsors.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent": "",
+  "dependencies": [
+  ]
+}
+]
